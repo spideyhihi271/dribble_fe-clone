@@ -1,0 +1,390 @@
+@import "../variable";
+
+.detail_job-container {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  margin: 16px 0;
+  .detail_job-header {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 90px;
+    padding-top: 7%;
+    border: 1.5px solid #f0f0f0;
+    border-right: none;
+    border-left: none;
+    position: relative;
+    .detail_job-avt {
+      display: block;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: white;
+      border: 1.5px solid #f0f0f0;
+      box-shadow: 0 0 5px gray;
+      position: absolute;
+      top: -25%;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      img {
+        object-fit: cover;
+      }
+    }
+    .detail_jon-name {
+      font-size: 50px;
+    }
+    .detail_job-more {
+      display: flex;
+      width: fit-content;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 22px;
+      p {
+        color: #bababa;
+        margin: 0 4px;
+      }
+      .detail_job-nameCom {
+        color: black;
+        font-weight: bold;
+      }
+    }
+    .detail_job-action {
+      display: flex;
+      width: fit-content;
+      margin: 16px auto;
+      .button {
+        font-weight: bold;
+        font-size: 18px;
+        padding: 7px 10px;
+        margin: 0 8px;
+        border: none;
+        border-radius: 10px;
+      }
+      .button_apply {
+        background-color: $main-color;
+        color: white;
+      }
+      .button_apply:hover {
+        background-color: $hover-main;
+      }
+    }
+  }
+  .detail_job-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 52px 0;
+    .detail_job-main {
+      display: block;
+      width: 67%;
+      .job_description{
+        font-size: 19px;
+        margin: 8px 0;
+      }
+      .title{
+        font-weight: bold;
+      }
+    }
+    .detail_job-aside {
+      display: block;
+      width: 30%;
+      .detail_job-short {
+        display: block;
+        padding: 2% 4%;
+        border-radius: 10px;
+        border: 1.5px solid #f0f0f0;
+        .detail_short-box {
+          margin-bottom: 16px;
+          .detail_short-key {
+            font-size: 15px;
+          }
+          .detail_short-value {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 4px 0;
+          }
+        }
+        .detail_short-box:last-child {
+          margin-bottom: 0px;
+        }
+      }
+      .job_actions {
+        display: flex;
+        margin: 8px 0;
+        justify-content: flex-end;
+        .detail_job-report {
+          display: block;
+          background-color: $tranparent-bg;
+          border: none;
+          font-size: 16px;
+          color: $main-color;
+          i {
+            margin: 0 8px;
+          }
+        }
+        .detail_job-report:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+.application_lable {
+  transform: scale(0.9);
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  transition: all ease-in-out 0.25s;
+  .appy_container {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    left: 10%;
+    bottom: 5%;
+    z-index: 1;
+    border-radius: 10px;
+    background-color: white;
+    padding: 1% 2%;
+    .closeLable {
+      position: absolute;
+      right: 30px;
+      top: 15px;
+      font-size: 25px;
+      color: #898989;
+    }
+    .closeLable:hover {
+      cursor: pointer;
+      color: #000000;
+    }
+    .appli_header {
+      display: block;
+      width: 100%;
+      font-size: 20px;
+      text-align: center;
+      padding: 8px 0;
+      border-bottom: 1.5px solid #f0f0f0;
+      .span {
+        margin: 0 8px;
+      }
+    }
+    .appli_main {
+      margin: 32px 0;
+      text-align: center;
+      .appli_title {
+        font-size: 25px;
+        font-weight: bold;
+        margin: 8px 0;
+      }
+      .appli_description {
+        width: 50%;
+        margin: 0 auto;
+      }
+      .appli_box {
+        display: flex;
+        justify-content: space-between;
+        height: 350px;
+        margin: 16px 0;
+        .appli_short-info {
+          display: block;
+          width: 49%;
+          height: 100%;
+          border-radius: 10px;
+          overflow: hidden;
+          padding: 1%;
+          border: 2px solid #f0f0f0;
+          .short_project-list {
+            display: flex;
+            height: 120px;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            .short_project-item {
+              display: block;
+              width: 32%;
+              border-radius: 10px;
+              overflow: hidden;
+              img {
+                object-fit: cover;
+              }
+            }
+          }
+          .short_info-content {
+            display: block;
+            width: 100%;
+            height: calc(100% - 136px);
+            position: relative;
+            border: 1px solid white;
+            .info-avt {
+              position: absolute;
+              top: -25%;
+              right: 0;
+              left: 0;
+              display: block;
+              width: 100px;
+              height: 100px;
+              border-radius: 50%;
+              overflow: hidden;
+              background-color: white;
+              box-shadow: 0 0 5px gray;
+              padding: 3px;
+              margin: 0 auto;
+              .avt_outline {
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                overflow: hidden;
+              }
+              img {
+                object-fit: cover;
+              }
+            }
+            .info_username {
+              font-size: 20px;
+              font-weight: bold;
+              margin-top: 80px;
+            }
+            .info_location {
+              font-size: 17px;
+              color: #898989;
+            }
+            .info_spec-list {
+              display: flex;
+              justify-content: space-between;
+              margin: 4px 0;
+              .info_spec-item {
+                flex: 1;
+                border-right: 2px solid #898989;
+                .info-spec-value {
+                  font-size: 20px;
+                  font-weight: bold;
+                }
+                .info_spec-key {
+                  color: #898989;
+                }
+              }
+              .info_spec-item:last-child {
+                border-right: none;
+              }
+            }
+          }
+        }
+        .appli_message {
+          display: block;
+          width: 49%;
+          height: 100%;
+          border-radius: 10px;
+          overflow: hidden;
+          border: 2px solid #f0f0f0;
+          textarea {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 2%;
+            border: none;
+            font-size: 16px;
+          }
+        }
+      }
+      .appli_btn {
+        display: block;
+        width: 35%;
+        height: 40px;
+        line-height: 40px;
+        margin: 32px auto;
+        background-color: $main-color;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+      }
+    }
+  }
+  .appli_layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+  }
+}
+#activeAppli:checked ~ .application_lable {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Mobile Tablet */
+@media (max-width: 1023px) {
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+ 
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .detail_job-container {
+    margin: 8px 0;
+    .detail_job-header {
+      .detail_job-avt {
+        width: 80px;
+        height: 80px;
+        top: -30%;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        img {
+          object-fit: cover;
+        }
+      }
+      .detail_jon-name {
+        font-size: 30px;
+        margin-top: 20px;
+      }
+      .detail_job-more {
+        display: flex;
+        width: fit-content;
+        margin: 0 auto;
+        text-align: left;
+        font-size: 18px;
+        p {
+          display: none;
+        }
+        .detail_job-nameCom {
+          display: block;
+          color: black;
+          font-weight: bold;
+        }
+      }
+    }
+    .detail_job-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 52px 0;
+      .detail_job-main {
+        display: block;
+        width: 100%;
+        order: 2;
+      }
+      .detail_job-aside {
+        display: block;
+        width: 100%;
+        order: 1;
+      }
+    }
+  }
+}

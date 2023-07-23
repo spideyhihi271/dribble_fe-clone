@@ -1,0 +1,91 @@
+@import "../variable";
+
+.upload_project{
+    display: block;
+    padding: 1% 5%;
+    position: relative;
+    .upload_pro-header{
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: space-between;
+        button{
+            display: block;
+            width: 100px;
+            height: 90%;
+            background-color: white;
+            border: 1px solid #f6f6f7;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bolder;
+            transition: all ease-in-out .3s;
+        }
+        .upload_btn-save{
+            background-color: $main-color;
+            color: white;
+        }
+        .upload_btn-save:disabled {
+            background-color: #fadae6;
+        }
+        .upload_btn-save:disabled:hover {
+            cursor: not-allowed;
+        }
+        .upload_btn-save:hover{
+            border: 1px solid $main-color;
+        }
+        button:hover{
+            border: 1px solid gray;
+        }
+    }
+}
+
+/* Mobile Tablet */
+@media (max-width: 1023px) {
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .upload_project{
+        display: block;
+        padding: 1% 5%;
+        position: relative;
+        .upload_pro-header{
+            display: flex;
+            height: 50px;
+            align-items: center;
+            justify-content: space-between;
+            button{
+                display: block;
+                width: 100px;
+                height: 90%;
+                background-color: white;
+                border: 1px solid #f6f6f7;
+                border-radius: 10px;
+                font-size: 16px;
+                font-weight: bolder;
+                transition: all ease-in-out .3s;
+            }
+            .upload_btn-save{
+                background-color: $main-color;
+                color: white;
+            }
+            .upload_btn-save:disabled {
+                background-color: #fadae6;
+            }
+            .upload_btn-save:disabled:hover {
+                cursor: not-allowed;
+            }
+            .upload_btn-save:hover{
+                border: 1px solid $main-color;
+            }
+            button:hover{
+                border: 1px solid gray;
+            }
+        }
+    }
+}

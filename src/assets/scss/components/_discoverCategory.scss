@@ -1,0 +1,133 @@
+@import "../variable";
+
+.discover_category {
+  display: block;
+  margin-top: $header-h;
+  padding: 2% 0;
+  .discover_header {
+    display: block;
+    margin: 8px 0;
+    text-align: center;
+    .header_title {
+      font-size: 35px;
+      span {
+        font-weight: bold;
+        color: $main-color;
+      }
+    }
+  }
+  .discover_cate-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 16px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    .discover_cate-item {
+      display: block;
+      width: 100%;
+      height: 220px;
+      background-color: antiquewhite;
+      position: relative;
+      .discover_cate-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 0;
+        img {
+          object-fit: cover;
+        }
+      }
+      .discover_cate-name{
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        z-index: 2;
+        display: flex;
+        height: 50px;
+        width: 100%;
+        align-items: center;
+        font-size: 17px;
+        color: white;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+        padding-left: 15px;
+      }
+    }
+    .discover_cate-item:first-child {
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+/* Mobile Tablet */
+@media (max-width: 1023px) {
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .discover_category {
+    padding: 0;
+    margin: 8px 0;
+    .discover_cate-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4px;
+      margin: 16px 0;
+      border-radius: 0px;
+      .discover_cate-item {
+        display: block;
+        width: 100%;
+        height: 180px;
+        background-color: antiquewhite;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        .discover_cate-bg {
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          z-index: 0;
+          img {
+            object-fit: cover;
+          }
+        }
+        .discover_cate-name{
+          position: absolute;
+          left: 0px;
+          bottom: 0px;
+          z-index: 2;
+          display: flex;
+          height: 50px;
+          width: 100%;
+          align-items: center;
+          font-size: 17px;
+          color: white;
+          background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+          padding-left: 15px;
+        }
+      }
+      .discover_cate-item:first-child {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: unset;
+        grid-column-end: unset;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

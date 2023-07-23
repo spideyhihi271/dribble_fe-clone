@@ -1,0 +1,32 @@
+.project_list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+.not_have-value{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bolder;
+}
+/* Mobile Tablet */
+@media (max-width: 1023px) {
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .project_list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .project_list{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+    }
+}

@@ -1,0 +1,17 @@
+@import "../variable";
+.project_w-h {
+  display: block;
+  margin: 16px 0;
+  .project_w-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    margin: 8px 0;
+    .title {
+      font-weight: bolder;
+    }
+    .link {
+      color: $main-color;
+    }
+  }
+}

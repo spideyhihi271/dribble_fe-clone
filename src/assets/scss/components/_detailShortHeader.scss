@@ -1,0 +1,531 @@
+@import "../variable";
+
+.detail_short-flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: $header-h;
+  justify-content: space-between;
+  padding: 3% 0;
+  .detail_short-main {
+    display: block;
+    width: 69.5%;
+    .detail_short-header {
+      display: flex;
+      height: 50px;
+      align-items: center;
+      justify-content: space-between;
+      .detail_short_info {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        .detail_short-avt {
+          display: block;
+          position: relative;
+          .avt_container {
+            display: block;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 16px;
+          }
+          .avt_container-hover {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            display: block;
+            margin-top: 10px;
+            width: 350px;
+            padding: 15px;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: 0 10px 15px rgb(205, 205, 205);
+            transition: all ease-in-out 0.3s;
+            .hover_header {
+              display: flex;
+              justify-content: space-between;
+              height: 100px;
+              align-items: center;
+              .hover_info {
+                display: flex;
+                height: 100%;
+                align-items: center;
+                .hover_avt {
+                  display: block;
+                  width: 60px;
+                  height: 60px;
+                  border-radius: 50%;
+                  overflow: hidden;
+                  margin-right: 8px;
+                  img {
+                    object-fit: cover;
+                  }
+                }
+                .hover_info-owner {
+                  display: block;
+                  .hover_info-name {
+                    font-weight: bold;
+                    font-size: 18px;
+                  }
+                  .hover_info-address {
+                    color: $text-color;
+                  }
+                }
+              }
+              .hover_follow {
+                display: flex;
+                width: 110px;
+                height: 45px;
+                align-items: center;
+                border-radius: 15px;
+                border: none;
+                font-weight: bold;
+                span {
+                  flex: 2.5;
+                  text-align: center;
+                }
+                i {
+                  flex: 1;
+                  text-align: center;
+                  font-size: 17px;
+                  margin: 4px;
+                  color: $main-color;
+                }
+              }
+            }
+            .hover_short-list {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 4px;
+              div {
+                display: block;
+                height: 80px;
+                background-color: #f0f0f0;
+                border-radius: 10px;
+                overflow: hidden;
+                img {
+                  object-fit: cover;
+                }
+              }
+            }
+          }
+          .avt_container:hover {
+            cursor: pointer;
+          }
+          .avt_container:hover + .avt_container-hover {
+            visibility: visible;
+            opacity: 1;
+          }
+          .avt_container-hover:hover {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+        .detail_info-contents {
+          display: block;
+          .info_short-name {
+            font-size: 18px;
+            font-weight: bolder;
+          }
+          .info_short-more {
+            display: flex;
+            height: 20px;
+            align-items: center;
+            .info_more {
+              background-color: transparent;
+              border: none;
+              font-size: 16px;
+              color: $text-color;
+            }
+            .hire {
+              color: $main-color;
+            }
+            i {
+              font-size: 5px;
+              margin: 0 8px;
+            }
+          }
+        }
+      }
+      .detail_short_btns {
+        display: flex;
+        button {
+          display: block;
+          width: 100px;
+          height: 45px;
+          font-weight: bold;
+          border: 1px solid #f3f3f4;
+          background-color: transparent;
+          border-radius: 15px;
+          margin: 0 8px;
+        }
+        button:hover {
+          background-color: #f3f3f4;
+        }
+        .like_btn {
+          background-color: $main-color;
+          color: white;
+          i {
+            margin: 0 4px;
+          }
+        }
+        .like_btn.active {
+          color: $main-color;
+          border: 1px solid $main-color;
+          background-color: white;
+        }
+        .like_btn:hover {
+          background-color: $hover-main;
+        }
+      }
+    }
+    .detail_short-footer {
+      display: block;
+      margin: 16px 0;
+      text-align: center;
+      .owner_avt {
+        display: flex;
+        height: 80px;
+        align-items: center;
+        position: relative;
+        margin: 10px 0;
+        .line {
+          display: block;
+          height: 2px;
+          width: 100%;
+          background-color: #e7e7e9;
+        }
+        .avt_border {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          display: block;
+          height: 95px;
+          width: 95px;
+          margin: 0 auto;
+          padding: 0 5px;
+          background-color: white;
+          .avt_main {
+            display: block;
+            height: 80px;
+            width: 80px;
+            margin: 0 auto;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: white;
+          }
+        }
+      }
+      .owner_name {
+        font-weight: bold;
+        font-size: 20px;
+        margin: 4px 0;
+      }
+      .owner_bio {
+        font-size: 16px;
+        margin: 4px 0;
+      }
+      .hire_btn {
+        display: block;
+        width: 120px;
+        height: 40px;
+        margin: 0 auto;
+        font-weight: bolder;
+        color: white;
+        border-radius: 15px;
+        background-color: $main-color;
+        border: none;
+      }
+    }
+  }
+  .detail_short-aside {
+    flex: 1;
+    margin-left: 16px;
+    border-left: 1.5px solid #eaeaec;
+  }
+}
+
+/* Mobile Tablet */
+@media (max-width: 1023px) {
+  .detail_short-flex {
+    margin-top: 0;
+    padding: 3% 1%;
+    .detail_short-main {
+      display: block;
+      width: 100%;
+      .detail_short-header {
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: space-between;
+        .detail_short_info {
+          display: flex;
+          height: 100%;
+          align-items: center;
+          .detail_short-avt {
+            display: block;
+            position: relative;
+            .avt_container {
+              display: block;
+              height: 50px;
+              width: 50px;
+              border-radius: 50%;
+              overflow: hidden;
+              margin-right: 16px;
+            }
+            .avt_container-hover {
+              visibility: hidden;
+              opacity: 0;
+              position: absolute;
+              display: block;
+              margin-top: 10px;
+              width: 350px;
+              padding: 15px;
+              border-radius: 15px;
+              background-color: white;
+              box-shadow: 0 10px 15px rgb(205, 205, 205);
+              transition: all ease-in-out 0.3s;
+              .hover_header {
+                display: flex;
+                justify-content: space-between;
+                height: 100px;
+                align-items: center;
+                .hover_info {
+                  display: flex;
+                  height: 100%;
+                  align-items: center;
+                  .hover_avt {
+                    display: block;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin-right: 8px;
+                    img {
+                      object-fit: cover;
+                    }
+                  }
+                  .hover_info-owner {
+                    display: block;
+                    .hover_info-name {
+                      font-weight: bold;
+                      font-size: 18px;
+                    }
+                    .hover_info-address {
+                      color: $text-color;
+                    }
+                  }
+                }
+                .hover_follow {
+                  display: flex;
+                  width: 110px;
+                  height: 45px;
+                  align-items: center;
+                  border-radius: 15px;
+                  border: none;
+                  font-weight: bold;
+                  span {
+                    flex: 2.5;
+                    text-align: center;
+                  }
+                  i {
+                    flex: 1;
+                    text-align: center;
+                    font-size: 17px;
+                    margin: 4px;
+                    color: $main-color;
+                  }
+                }
+              }
+              .hover_short-list {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 4px;
+                div {
+                  display: block;
+                  height: 80px;
+                  background-color: #f0f0f0;
+                  border-radius: 10px;
+                  overflow: hidden;
+                  img {
+                    object-fit: cover;
+                  }
+                }
+              }
+            }
+            .avt_container:hover {
+              cursor: pointer;
+            }
+            .avt_container:hover + .avt_container-hover {
+              visibility: visible;
+              opacity: 1;
+            }
+            .avt_container-hover:hover {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+          .detail_info-contents {
+            display: block;
+            .info_short-name {
+              font-size: 18px;
+              font-weight: bolder;
+            }
+            .info_short-more {
+              display: flex;
+              height: 20px;
+              align-items: center;
+              .info_more {
+                background-color: transparent;
+                border: none;
+                font-size: 16px;
+                color: $text-color;
+              }
+              .hire {
+                color: $main-color;
+              }
+              i {
+                font-size: 5px;
+                margin: 0 8px;
+              }
+            }
+          }
+        }
+        .detail_short_btns {
+          display: flex;
+          button {
+            display: block;
+            width: 100px;
+            height: 45px;
+            font-weight: bold;
+            border: 1px solid #f3f3f4;
+            background-color: transparent;
+            border-radius: 15px;
+            margin: 0 8px;
+          }
+          button:hover {
+            background-color: #f3f3f4;
+          }
+          .like_btn {
+            background-color: $main-color;
+            color: white;
+            i {
+              margin: 0 4px;
+            }
+          }
+          .like_btn.active {
+            color: $main-color;
+            border: 1px solid $main-color;
+            background-color: white;
+          }
+          .like_btn:hover {
+            background-color: $hover-main;
+          }
+        }
+      }
+      .detail_short-footer {
+        display: block;
+        margin: 16px 0;
+        text-align: center;
+        .owner_avt {
+          display: flex;
+          height: 80px;
+          align-items: center;
+          position: relative;
+          margin: 10px 0;
+          .line {
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: #e7e7e9;
+          }
+          .avt_border {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: block;
+            height: 95px;
+            width: 95px;
+            margin: 0 auto;
+            padding: 0 5px;
+            background-color: white;
+            .avt_main {
+              display: block;
+              height: 80px;
+              width: 80px;
+              margin: 0 auto;
+              border-radius: 50%;
+              overflow: hidden;
+              background-color: white;
+            }
+          }
+        }
+        .owner_name {
+          font-weight: bold;
+          font-size: 20px;
+          margin: 4px 0;
+        }
+        .owner_bio {
+          font-size: 16px;
+          margin: 4px 0;
+        }
+        .hire_btn {
+          display: block;
+          width: 120px;
+          height: 40px;
+          margin: 0 auto;
+          font-weight: bolder;
+          color: white;
+          border-radius: 15px;
+          background-color: $main-color;
+          border: none;
+        }
+      }
+    }
+    .detail_short-aside {
+      flex: 1;
+      margin-left: 0;
+      border-left: navajowhite;
+    }
+  }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .detail_short-flex {
+    .detail_short-main {
+      .detail_short-header {
+        display: flex;
+        flex-wrap: wrap;
+        height: fit-content;
+        .detail_short_info {
+          display: flex;
+          height: 60px;
+        }
+        .detail_short_btns {
+          display: flex;
+          align-items: center;
+          height: 60px;
+          button {
+            display: block;
+            width: 100px;
+            height: 45px;
+            font-weight: bold;
+            border: 1px solid #f3f3f4;
+            background-color: transparent;
+            border-radius: 15px;
+            margin: 0 8px;
+          }
+        }
+      }
+    }
+  }
+}

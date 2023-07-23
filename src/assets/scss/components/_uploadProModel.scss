@@ -1,0 +1,201 @@
+@import "../variable";
+.upload_final-model{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    height: 100vh;
+    .contents{
+        position: absolute;
+        top: 5%;
+        right: 20%;
+        left: 20%;
+        z-index: 1;
+        display: block;
+        height: 500px;
+        border-radius: 10px;
+        background-color: white;
+        padding: 30px;
+        animation: fadeIn 1 .3s forwards;
+        .contents_title{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .contents_container{
+            display: flex;
+            margin: 16px 0;
+            .contents_aside{
+                display: block;
+                width: 35%;
+                .upload_project{
+                    display: block;
+                    width: 90%;
+                    .aside_title{
+                        margin-bottom: 8px;
+                    }
+                    .project_thumb{
+                        height: 200px;
+                        width: 100%;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        img{
+                            object-fit: cover;
+                        }
+                    }
+                    .project_total{
+                        display: flex;
+                        justify-content: flex-end;
+                        margin: 8px 0;
+                        .total_list{
+                            display: flex;
+                            width: 45%;
+                            justify-content: space-between;
+                            .total_item{
+                                font-size: 14px;
+                                i{
+                                    margin: 0 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .contents_main{
+                display: block;
+                width: 65%;
+                .add_tags-container{
+                    display: block;
+                    margin: 8px 0;
+                    .add_tags-search{
+                        display: block;
+                        position: relative;
+                        .add_tags-input{
+                            display: block;
+                            width: 100%;
+                            height: 45px;
+                            padding-left: 10px;
+                            font-size: 16px;
+                            border: none;
+                            background-color: #f3f3f4;
+                            border-radius: 10px;
+                        }
+                        .add_tags-input:focus ~ .tags_suggest-list{
+                            display: block;
+                        }
+                        .tags_suggest-list:hover{
+                            display: block;
+                        }
+                        .tags_suggest-list{
+                            display: none;
+                            max-height: 250px;
+                            overflow-y: auto;
+                            position: absolute;
+                            top: 60px;
+                            right: 0;
+                            left: 0;
+                            border-radius: 10px;
+                            background-color: white;
+                            border: 1px solid #f3f3f4;
+                            .tags_suggest-item{
+                                display: block;
+                                width: 100%;
+                                height: 40px;
+                                text-align: left;
+                                padding-left: 15px;
+                                background-color: transparent;
+                                border: none;
+                                transition: all ease-in-out 0.3s;
+                            }
+                            .tags_suggest-item:hover{
+                                background-color: #e7e7e9;
+                            }
+                        }
+                        
+                    }
+                    .tags_seleted-list{
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin: 8px 0;
+                        .tag_selected-item{
+                            display: flex;
+                            height: 30px;
+                            width: fit-content;
+                            align-items: center;
+                            padding: 0px 8px;
+                            background-color: #e7e7e9;
+                            border-radius: 5px;
+                            margin: 4px;
+                            margin-left: 0;
+                            button{
+                                color: #b0b0b7;
+                                margin: 0 8px;
+                                background-color: transparent;
+                                border: none;
+                            }
+                        }
+                    }
+                    .tags_suggest{
+                        display: flex;
+                        flex-wrap: wrap;
+                        .tags_suggest-title{
+                            display: block;
+                            margin: 4px;
+                            margin-left: 0;
+                        }
+                        .tags_item{
+                            display: block;
+                            margin: 4px;
+                            background-color: transparent;
+                            border: none;
+                            color: $main-color;
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .add_tags-actions{
+                    position: absolute;
+                    bottom: 30px;
+                    right: 30px;
+                    display: flex;
+                    button{
+                        display: block;
+                        height: 45px;
+                        background-color: white;
+                        border-radius: 15px;
+                        font-weight: bold;
+                        border: 1px solid #f3f3f4;
+                    }
+                    .actions_cancel{
+                        width: 100px;
+                        margin: 0 8px;
+                    }
+                    .actions_upload{
+                        width: 180px;
+                        background-color: $main-color;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    .layer{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+        background-color: rgba($color: #000000, $alpha: .5);
+    }
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

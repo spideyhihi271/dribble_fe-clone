@@ -1,0 +1,135 @@
+@import "../variable";
+
+.flex_main {
+  display: block;
+  width: 75%;
+  .hire_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    .hire_item {
+      display: block;
+      width: 100%;
+      height: fit-content;
+      padding: 1% 2%;
+      border-radius: 10px;
+      transition: all ease-in-out 0.2s;
+      .hire_header {
+        display: flex;
+        height: 80px;
+        align-items: center;
+        .header_avt {
+          display: block;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          overflow: hidden;
+          img {
+            object-fit: cover;
+          }
+        }
+        .header_info {
+          display: block;
+          width: 50%;
+          height: 50%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: break-spaces;
+          margin: 0 8px;
+          .header_info-name {
+            font-weight: bold;
+          }
+          .header_info-location {
+            font-size: 15px;
+            color: $text-color;
+          }
+        }
+        .header_hire {
+          display: block;
+          height: 50%;
+          width: 30%;
+          .hire_btn {
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            width: 100%;
+            align-items: center;
+            text-align: center;
+            border: none;
+            background-color: $second-color;
+            color: $main-color;
+            font-weight: bold;
+            border-radius: 15px;
+            transition: all ease-in-out 0.3s;
+          }
+          .hire_btn:hover {
+            color: white;
+            background-color: $hover-main;
+          }
+        }
+      }
+      .hire_main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4px;
+        .hire_image {
+          display: block;
+          width: 100%;
+          height: 80px;
+          border-radius: 10px;
+          overflow: hidden;
+          background-color: #e3e3e5;
+          box-shadow: 0 0 2px gray;
+          img {
+            object-fit: cover;
+          }
+        }
+      }
+      .hire_footer {
+        display: flex;
+        height: 50px;
+        align-items: center;
+        .hire_title {
+          font-weight: bold;
+        }
+        .hire_value{
+          margin: 0 8px;
+        }
+      }
+    }
+    .hire_item:hover {
+      cursor: pointer;
+      box-shadow: 0 0 5px gray;
+    }
+  }
+}
+
+/* Mobile Tablet */
+@media (max-width: 1023px) {
+  .flex_main {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .flex_main {
+    .hire_list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .flex_main {
+    .hire_list {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 8px;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@import "../variable";
+
+.profile_workspace {
+  display: block;
+  .workspace_header {
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f0f0f0;
+    .workspace_nav {
+      display: flex;
+      width: 80%;
+      height: 80%;
+      align-items: center;
+      .workspace_nav-item {
+        display: block;
+        padding-right: 20px;
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        font-size: 16.5px;
+        text-align: left;
+        font-weight: bold;
+        color: $text-color;
+        span {
+          margin: 0 4px;
+          font-weight: lighter;
+        }
+      }
+      .workspace_nav-item.active {
+        color: black;
+        span {
+          margin: 0 4px;
+          font-weight: lighter;
+        }
+      }
+    }
+    .workspace_sort {
+      display: flex;
+      height: 65%;
+      width: 10%;
+      .sort_input {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        border: 1.5px solid #f0f0f0;
+      }
+    }
+  }
+  .workspace_main {
+    display: block;
+    .work_space {
+      display: block;
+      min-height: 300px;
+      margin: 32px 0;
+    }
+  }
+}
+
+/* Mobile Tablet */
+@media (max-width: 1023px) {
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .profile_workspace {
+    .workspace_header {
+      .workspace_nav {
+        display: flex;
+        width: 80%;
+        height: 80%;
+        align-items: center;
+      }
+      .workspace_sort {
+        display: flex;
+        height: 55%;
+        width: 15%;
+      }
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .profile_workspace {
+    display: block;
+    .workspace_header {
+     flex-wrap: wrap;
+     height: fit-content;
+      .workspace_nav {
+      flex-wrap: wrap;
+       width: 100%;
+       height: fit-content;
+       border-bottom: 1.5px solid #f0f0f0;
+        .workspace_nav-item {
+          width: fit-content;
+          margin: 8px 0;
+          margin-right: 8px;
+          span {
+           display: none;
+          }
+        }
+      }
+      .workspace_sort {
+        display: flex;
+        height: 40px;
+        width: 40%;
+        margin: 8px 0;
+        .sort_input {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

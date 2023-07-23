@@ -1,0 +1,66 @@
+@import "../variable";
+.banner_header-container{
+    display: block;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    .banner_bg{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        img{
+            object-fit: cover;
+        }
+    }
+    .banner_content{
+        position: absolute;
+        top: 40%;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        text-align: center;
+        color: white;
+        .content_title{
+            font-weight: bolder;
+            color: white;
+            font-size: 50px;
+        }
+        .content_description{
+            font-size: 20px;
+        }
+    }
+}
+/* Mobile Tablet */
+@media (max-width: 1023px) {
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .banner_header-container{
+        .banner_content{
+            .content_title{
+                font-size: 45px;
+            }
+            .content_description{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .banner_header-container{
+        .banner_content{
+            .content_title{
+                font-size: 30px;
+            }
+            .content_description{
+                font-size: 15px;
+            }
+        }
+    }
+}

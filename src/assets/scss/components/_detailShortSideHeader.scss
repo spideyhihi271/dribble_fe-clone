@@ -1,0 +1,67 @@
+@import "../variable";
+
+.detail_short-side {
+  display: block;
+  height: 100%;
+  padding: 0 5%;
+  .detail_side-header {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    .side_header-btns {
+      display: flex;
+      button {
+        display: block;
+        width: 50px;
+        height: 45px;
+        margin-right: 8px;
+        background-color: transparent;
+        font-weight: bolder;
+        border-radius: 10px;
+        border: 1.5px solid #efeff0;
+        font-size: 18px;
+      }
+      .active{
+        border: 1px solid $main-color;
+        color: $main-color;
+      }
+    }
+    .side_header-btns:last-child {
+      display: flex;
+      button {
+        display: block;
+        width: 120px;
+        height: 45px;
+        margin: 0 8px;
+        font-size: 16px;
+        i {
+          font-size: 18px;
+          margin: 0 8px;
+        }
+      }
+    }
+  }
+}
+
+/* Mobile Tablet */
+@media (max-width: 1023px) {
+  .detail_short-side {
+    display: block;
+    height: 100%;
+    padding: 0;
+    .detail_side-header {
+      display: none;
+    }
+  }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+   
+}

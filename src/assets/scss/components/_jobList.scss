@@ -1,0 +1,83 @@
+@import '../variable';
+.jobList_container{
+    margin: 16px auto;
+    .jobList_header{
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 18px;
+        margin: 8px 0;
+        p{
+            
+            font-weight: bolder;
+        }
+        .upload_job{
+            display: flex;
+            height: 90%;
+            align-items: center;
+            background-color: $main-color;
+            border: none;
+            color: white;
+            font-size: 15px;
+            border-radius: 15px;
+            padding: 0 8px;
+            transition: all ease-in-out .2s;
+        }
+        .upload_job:hover{
+            background-color: $hover-main;
+        }
+    }
+    .jobList_main{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        .nothing-title{
+            display: block;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            width: 100%;
+            text-align: center;
+            margin: 32px 0;
+        }
+    }
+}
+/* Mobile Tablet */
+@media (max-width: 1023px) {
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .jobList_container{
+        margin: 16px auto;
+        .jobList_main{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .jobList_container{
+        margin: 16px auto;
+        .jobList_header{
+            font-size: 18px;
+            .upload_job{
+                span{
+                    display: none;
+                }
+            }
+            .upload_job:hover{
+                background-color: $hover-main;
+            }
+        }
+        .jobList_main{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 16px;
+            margin: 8px 0;
+        }
+    }
+}

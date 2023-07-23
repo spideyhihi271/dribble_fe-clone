@@ -1,0 +1,145 @@
+@import "../variable";
+
+.edit_profile-container{
+  display: block;
+  width: 79%;
+  height: fit-content;
+  .edit_model{
+    display: block;
+    .message{
+      display: flex;
+      height: 40px;
+      align-items: center;
+      color: white;
+      background-color: #0d0c22;
+      padding-left: 10px;
+      font-weight: bolder;
+    }
+    .edit_form{
+      display: block;
+      .edit_form-item{
+        display: block;
+        margin: 8px 0;
+        .edit_message{
+          font-size: 18px;
+          margin: 8px 0;
+          color: red;
+        }
+        label{
+          display: block;
+          font-size: 18px;
+          font-weight: bolder;
+        }
+        input, select{
+          display: block;
+          height: 50px;
+          width: 100%;
+          margin: 8px 0;
+          font-size: 17px;
+          padding: 10px;
+          border-radius: 10px;
+          border: 2px solid #e8e8ea;
+        }
+        textarea{
+          display: block;
+          height: 120px;
+          width: 100%;
+          margin: 8px 0;
+          font-size: 17px;
+          padding: 10px;
+          border-radius: 10px;
+          border: 2px solid #e8e8ea;
+        }
+        .input_description{
+          color: $text-color;
+        }
+        .edit_fist-view{
+          color: $text-color;
+          font-size: 17px;
+          span{
+            font-weight: bolder;
+          }
+        }
+      }
+      .edit_form-btns{
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: flex-end;
+        button{
+          display: block;
+          height: 45px;
+          width: 150px;
+          background-color: $main-color;
+          color: white;
+          border: none;
+          font-weight: bolder;
+          border-radius: 15px;
+        }
+        button:disabled{
+          background-color: $loader_main;
+        }
+        button:disabled:hover{
+          cursor: not-allowed;
+        }
+      }
+      .edit_form-image{
+        display: flex;
+        height: 80px;
+        align-items: center;
+        .edit_form-firstview{
+          display: flex;
+          width: 65px;
+          height: 65px;
+          align-items: center;
+          justify-content: space-between;
+          border-radius: 50%;
+          overflow: hidden;
+          margin-right: 16px;
+          i{
+            width: 100%;
+            text-align: center;
+          }
+          img{
+            object-fit: cover;
+          }
+        }
+        .edit_form-actions{
+          display: flex;
+          button, label{
+            display: block;
+            padding:  10px 16px;
+            margin: 0 8px;
+            border: 2px solid #e8e8ea;
+            background-color: transparent;
+            border-radius: 10px;
+            font-weight: bold;
+          }
+          button:last-child{
+            background-color: #f3f3f4;
+            border: 2px solid #f3f3f4;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Mobile Tablet */
+@media (max-width: 1023px) {
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+ 
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .edit_profile-container{
+    display: block;
+    width: 100%;
+    height: fit-content;
+    padding: 1%;
+  }
+}

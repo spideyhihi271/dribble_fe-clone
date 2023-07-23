@@ -1,0 +1,99 @@
+@import "../variable";
+
+.detail_short-comments{
+    display: block;
+    margin: 32px 0;
+    .detail_short-title{
+        font-size: 20px;
+        font-weight: bold;
+        margin: 8px 0;
+    }
+    .detail_comment-box{
+        display: block;
+        .comment-content{
+            display: block;
+            width: 100%;
+            height: 70px;
+            border: none;
+            background-color: #f8f8f8;
+            padding: 5px;
+            border-radius: 10px;
+            .input{
+                display: block;
+                height: 100%;
+                width: 100%;
+                border: none;
+                resize: none;
+                background-color: transparent;
+                padding: 10px 5px;
+            }
+        }
+        .comment-btns{
+            display: flex;
+            justify-content: flex-end;
+            margin: 8px 0;
+            button{
+                display: block;
+                height: 40px;
+                width: 110px;
+                color: white;
+                font-weight: bolder;
+                border: none;
+                border-radius: 10px;
+                background-color: $main-color;
+            }
+            button:disabled{
+                background-color: $loader_main;
+            }
+            button:disabled:hover{
+                cursor: pointer;
+            }
+        }
+        
+    }
+    .comment_list{
+        display: block;
+        margin: 8px 0;
+        .comment_item{
+            display: flex;
+            margin: 8px 0;
+            .comment_avt{
+                display: block;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: 16px;
+            }
+            .comment_info{
+                display: block;
+                .comment_info-owner{
+                    font-size: 17px;
+                    font-weight: bold;
+                }
+                .comment-content{
+                    color: #61616f;
+                    margin: 8px 0;
+                }
+                .comment_public{
+                    font-size: 13px;
+                    font-weight: lighter;
+                }
+            }
+        }
+    }
+}
+
+/* Mobile Tablet */
+@media (max-width: 1023px) {
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+   
+}

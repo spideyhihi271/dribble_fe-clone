@@ -1,0 +1,42 @@
+@import "../variable";
+
+.edit_profile {
+  display: block;
+  margin: 0 auto;
+  margin-top: calc($header-h * 2);
+  width: 65%;
+  padding: 2% 0;
+  .edit_profile-workspace{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 8px 0;
+  }
+}
+
+/* Mobile Tablet */
+@media (max-width: 1023px) {
+  .edit_profile {
+    display: block;
+    margin: 0 auto;
+    margin-top: calc($header-h * 0.5);
+    width: 100%;
+    padding: 1% 0;
+    .edit_profile-workspace{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 8px 0;
+    }
+  }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+   
+}

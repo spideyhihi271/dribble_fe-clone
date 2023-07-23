@@ -1,0 +1,25 @@
+@import "../variable";
+
+.detail_short-contents {
+  display: block;
+  margin: 16px 0;
+  .contents_item {
+    display: block;
+    margin: 16px 0;
+    .contents_image {
+      height: fit-content;
+      border-radius: 15px;
+      overflow: hidden;
+      img {
+        object-fit: contain;
+      }
+    }
+    .content_item-normal {
+      font-size: 20px;
+      margin: 4px 0;
+    }
+    .title {
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,212 @@
+@import "../variable";
+
+.detail_collection-header {
+  display: block;
+  margin-top: $header-h;
+  padding: 5% 0;
+  .header_name-share {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    .header_name-col {
+      font-size: 50px;
+      font-weight: bolder;
+      margin-bottom: 16px;
+    }
+    .header_share-list {
+      display: flex;
+      height: 80%;
+      align-items: center;
+      .header_share-item {
+        display: flex;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+        width: 100px;
+        height: 100%;
+        background-color: $third-color;
+        border-radius: 10px;
+        margin: 0 8px;
+        transition: all ease-in-out 0.3s;
+        i {
+          flex: 0.5;
+          font-size: 15px;
+          color: #3b5998;
+          text-align: right;
+        }
+        span {
+          flex: 1;
+          text-align: center;
+        }
+      }
+      .header_share-item:nth-child(2) {
+        i {
+          color: #1da1f2;
+        }
+      }
+      .header_share-item:last-child {
+        i {
+          color: black;
+        }
+      }
+      .header_share-item:hover {
+        background-color: $hover-second;
+      }
+    }
+  }
+  .header_more-info {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 0;
+    .header_info-total {
+      .total_short-update {
+        display: flex;
+        height: 20px;
+        align-items: center;
+        color: $text-color;
+        margin: 8px 0;
+        i {
+          font-size: 5px;
+          margin: 0 8px;
+        }
+      }
+      .total_short-description {
+        margin: 8px 0;
+        font-weight: lighter;
+        color: $text-color;
+      }
+      .info-owner {
+        display: flex;
+        height: 25px;
+        align-items: center;
+        margin: 8px 0;
+        .info_owner-avt {
+          display: block;
+          width: 25px;
+          height: 25px;
+          overflow: hidden;
+          border-radius: 50%;
+          margin-right: 8px;
+          img {
+            object-fit: cover;
+          }
+        }
+        .info_owner-name {
+          font-weight: 700;
+        }
+      }
+    }
+    .header_info-actions {
+      display: flex;
+      height: 80%;
+      button {
+        display: block;
+        height: 100%;
+        width: 110px;
+        margin-left: 8px;
+        background-color: white;
+        border-radius: 10px;
+        font-weight: bolder;
+        border: 1.5px solid #ebebec;
+        transition: all ease-in-out 0.3s;
+      }
+      button {
+        background-color: rgba($color: #000000, $alpha: 0.04);
+      }
+    }
+  }
+}
+/* Mobile Tablet */
+@media (max-width: 1023px) {
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .detail_collection-header {
+    display: block;
+    margin-top: 0;
+    padding: 5% 0;
+    .header_name-share {
+      display: flex;
+      flex-wrap: wrap;
+      height: fit-content;
+      .header_name-col {
+        font-size: 40px;
+        width: 100%;
+        text-align: center;
+      }
+      .header_share-list {
+        height: 40px;
+      }
+    }
+    .header_more-info {
+      display: flex;
+      flex-wrap: wrap;
+      height: fit-content;
+      .header_info-total {
+        width: 100%;
+        .total_short-update {
+          display: flex;
+          height: 20px;
+          align-items: center;
+          color: $text-color;
+          margin: 8px 0;
+          i {
+            font-size: 5px;
+            margin: 0 8px;
+          }
+        }
+        .total_short-description {
+          margin: 8px 0;
+          font-weight: lighter;
+          color: $text-color;
+        }
+        .info-owner {
+          display: flex;
+          height: 25px;
+          align-items: center;
+          margin: 8px 0;
+          .info_owner-avt {
+            display: block;
+            width: 25px;
+            height: 25px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-right: 8px;
+            img {
+              object-fit: cover;
+            }
+          }
+          .info_owner-name {
+            font-weight: 700;
+          }
+        }
+      }
+      .header_info-actions {
+        display: flex;
+        height: 80%;
+        button {
+          display: block;
+          height: 100%;
+          width: 110px;
+          margin-left: 8px;
+          background-color: white;
+          border-radius: 10px;
+          font-weight: bolder;
+          border: 1.5px solid #ebebec;
+          transition: all ease-in-out 0.3s;
+        }
+        button {
+          background-color: rgba($color: #000000, $alpha: 0.04);
+        }
+      }
+    }
+  }
+}

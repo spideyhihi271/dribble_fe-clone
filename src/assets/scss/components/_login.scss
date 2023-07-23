@@ -1,0 +1,272 @@
+@import "../variable";
+.login_page {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: space-between;
+  padding: 5% 15%;
+  .login_form,
+  .signup_form {
+    flex: 1;
+    .login_logo {
+      display: block;
+      width: 25%;
+      margin-bottom: 60px;
+    }
+    .login_container {
+      display: block;
+      width: 95%;
+      .login_title {
+        font-size: 30px;
+        font-weight: bold;
+        color: $main-color;
+      }
+      .login_description {
+        color: $text-color;
+      }
+      .login_error{
+        visibility: hidden;
+        color: red;
+        margin-top: 40px;
+      }
+      .login_error.active{
+        visibility: visible;
+      }
+      .form {
+        display: block;
+        width: 100%;
+        margin: 8px 0;
+        .form_item {
+          display: block;
+          width: 100%;
+          margin-bottom: 8px;
+          input {
+            display: block;
+            height: 40px;
+            width: 100%;
+            border: none;
+            font-size: 15px;
+            border-bottom: 1px solid #f0f0f0;
+            transition: all ease-in-out .3s;
+          }
+          .error_msg {
+            visibility: hidden;
+            color: red;
+            margin: 8px 0;
+          }
+        }
+        .form_item.error {
+          input {
+            border-bottom: 1px solid red;
+            box-shadow: 0px 2px red;
+          }
+          .error_msg {
+            visibility: visible;
+            color: red;
+          }
+        }
+        .login_more {
+          display: flex;
+          height: 20px;
+          align-items: center;
+          justify-content: space-between;
+          .remember_check {
+            display: flex;
+            align-items: center;
+            /* Hide the default checkbox */
+            .container input {
+              position: absolute;
+              opacity: 0;
+              cursor: pointer;
+              height: 0;
+              width: 0;
+              border-radius: 5px;
+            }
+
+            .container {
+              display: block;
+              position: relative;
+              cursor: pointer;
+              font-size: 18px;
+              user-select: none;
+              border-radius: 5px;
+              box-shadow: 2px 2px 0px rgb(183, 183, 183);
+            }
+
+            /* Create a custom checkbox */
+            .checkmark {
+              position: relative;
+              top: 0;
+              left: 0;
+              height: 20px;
+              width: 20px;
+              background-color: #ccc;
+              border-radius: 5px;
+            }
+
+            /* When the checkbox is checked, add a blue background */
+            .container input:checked ~ .checkmark {
+              box-shadow: 3px 3px 0px rgb(183, 183, 183);
+              transition: all 0.2s;
+              opacity: 1;
+              background-image: linear-gradient(
+                45deg,
+                rgb(225, 59, 170) 0%,
+                rgb(241, 39, 210) 100%
+              );
+            }
+
+            .container input ~ .checkmark {
+              transition: all 0.2s;
+              opacity: 1;
+              box-shadow: 1px 1px 0px rgb(183, 183, 183);
+            }
+
+            /* Create the checkmark/indicator (hidden when not checked) */
+            .checkmark:after {
+              content: "";
+              position: absolute;
+              opacity: 0;
+              transition: all 0.2s;
+            }
+
+            /* Show the checkmark when checked */
+            .container input:checked ~ .checkmark:after {
+              opacity: 1;
+              transition: all 0.2s;
+            }
+
+            /* Style the checkmark/indicator */
+            .container .checkmark:after {
+              left: 0.4em;
+              top: 0.15em;
+              width: 0.25em;
+              height: 0.5em;
+              border: solid white;
+              border-width: 0 0.15em 0.15em 0;
+              transform: rotate(45deg);
+            }
+            label {
+              font-size: 15px;
+              margin-left: 8px;
+            }
+          }
+          .forgot_pass {
+            font-size: 15px;
+            font-weight: bolder;
+            text-decoration: underline;
+          }
+        }
+        .login_btn {
+          display: block;
+          width: 100%;
+          height: 45px;
+          margin: 16px 0;
+          border: none;
+          background-color: black;
+          color: white;
+          border-radius: 10px;
+          transition: all ease-in-out 0.3s;
+        }
+        .login_btn:disabled{
+          background-color: #ccc;
+        }
+        .login_btn:disabled:hover {
+          cursor: not-allowed;
+        }
+        .login_btn:hover {
+          box-shadow: 0 0 5px black;
+        }
+        .no_account {
+          display: block;
+          text-align: center;
+          font-size: 15px;
+          color: $text-color;
+          .sign_up-link {
+            color: $main-color;
+            font-weight: bold;
+            margin-left: 4px;
+          }
+        }
+      }
+    }
+  }
+  .login_intro {
+    flex: 1.2;
+    position: relative;
+    clip-path: polygon(
+      0% 15%,
+      15% 15%,
+      15% 0%,
+      85% 0%,
+      100% 0,
+      100% 15%,
+      100% 85%,
+      85% 85%,
+      85% 100%,
+      15% 100%,
+      0 100%,
+      0% 85%
+    );
+    .intro_bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 0 2%;
+      display: block;
+      img {
+        object-fit: cover;
+      }
+    }
+    .intro_info {
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      padding: 0 5%;
+      color: white;
+      .intro_title {
+        font-size: 20px;
+        font-weight: bolder;
+        margin-bottom: 50px;
+      }
+      .intro_author {
+        .author_name {
+          font-size: 16px;
+        }
+        .author_position {
+          font-size: 13px;
+        }
+        .author_job {
+          font-size: 13px;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}
+
+/* Mobile Tablet */
+@media (max-width: 1023px) {
+  .login_page {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-between;
+    padding: 20% 5%;
+    .login_intro {
+      display: none;
+    }
+  }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+}

@@ -1,0 +1,212 @@
+@import "../variable";
+
+.profile_container {
+  display: block;
+  margin-top: $header-h;
+  padding: 2% 0;
+  .profile_header {
+    display: flex;
+    height: 400px;
+    align-items: center;
+    margin-bottom: 32px;
+    .profile_info {
+      display: block;
+      width: 50%;
+      height: 100%;
+      .profile_avt {
+        display: block;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+          object-fit: cover;
+        }
+      }
+      .profile_name {
+        font-weight: bolder;
+        font-size: 30px;
+        margin: 4px 0;
+      }
+      .profile_short {
+        width: 80%;
+        font-weight: bolder;
+        font-size: 50px;
+        margin: 4px 0;
+      }
+      .profile_action-list {
+        display: flex;
+        width: 50%;
+        height: 50px;
+        align-items: center;
+        .button {
+          display: flex;
+          height: 80%;
+          padding: 10px 15px;
+          align-items: center;
+          margin-right: 8px;
+          border-radius: 10px;
+          font-weight: bold;
+          border: none;
+          font-size: 14.5px;
+          i {
+            margin-right: 4px;
+          }
+        }
+        .button.hire {
+          background-color: $main-color;
+          color: white;
+          transition: all ease-in-out 0.3s;
+        }
+        .button.hire:hover {
+          background-color: $hover-main;
+        }
+      }
+    }
+    .profile_banner {
+      display: block;
+      width: 50%;
+      height: 100%;
+      position: relative;
+      .profile_yourImage {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        display: block;
+        width: 85%;
+        height: 90%;
+        z-index: 1;
+        img {
+          object-fit: cover;
+        }
+        img[src=""] {
+          opacity: 0;
+        }
+      }
+      .profile_bg {
+        position: absolute;
+        right: 0;
+        display: block;
+        width: 50%;
+        height: 70%;
+        background-color: #f3f3f4;
+        z-index: 0;
+      }
+    }
+  }
+  .profile_main{
+    display: block;
+  }
+}
+/* Mobile Tablet */
+@media (max-width: 1023px) {
+  .profile_container {
+    margin: 0;
+  }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .profile_container {
+    .profile_header {
+      height: 300px;
+      .profile_info {
+        .profile_name {
+          font-weight: bolder;
+          font-size: 20px;
+          margin: 4px 0;
+        }
+        .profile_short {
+          width: 80%;
+          font-weight: bolder;
+          font-size: 32px;
+          margin: 4px 0;
+        }
+        .profile_action-list {
+          display: flex;
+          width: 80%;
+          height: 50px;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .profile_container {
+    .profile_header {
+      display: flex;
+      height: fit-content;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 32px;
+      .profile_info {
+        display: block;
+        width: 100%;
+        height: 300px;
+        order: 2;
+        .profile_avt {
+          display: block;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          overflow: hidden;
+          img {
+            object-fit: cover;
+          }
+        }
+        .profile_name {
+          font-weight: bolder;
+          font-size: 30px;
+          margin: 4px 0;
+        }
+        .profile_short {
+          width: 100%;
+          font-weight: bolder;
+          font-size: 30px;
+          margin: 8px 0;
+        }
+        .profile_action-list {
+          display: flex;
+          width: 80%;
+          height: 50px;
+          align-items: center;
+        }
+      }
+      .profile_banner {
+        display: block;
+        width: 100%;
+        height: 200px;
+        position: relative;
+        order: 1;
+        margin-bottom: 8px;
+        .profile_yourImage {
+          position: absolute;
+          top: 10%;
+          left: 0;
+          display: block;
+          width: 85%;
+          height: 90%;
+          z-index: 1;
+          img {
+            object-fit: cover;
+          }
+          img[src=""] {
+            opacity: 0;
+          }
+        }
+        .profile_bg {
+          position: absolute;
+          right: 0;
+          display: block;
+          width: 50%;
+          height: 70%;
+          background-color: #f3f3f4;
+          z-index: 0;
+        }
+      }
+    }
+  }
+}

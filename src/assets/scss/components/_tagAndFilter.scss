@@ -1,0 +1,203 @@
+@import "../variable";
+
+.tagandfilter_container {
+  display: flex;
+  margin: 8px 0;
+  margin-top: calc($header-h + 40px);
+  .tag_container {
+    display: block;
+    width: 50%;
+    .tag_title {
+      font-size: 40px;
+      font-weight: 700;
+      span {
+        color: $main-color;
+      }
+    }
+    .tag_description {
+      color: $text-color;
+      font-size: 17px;
+      margin: 8px 0;
+      b {
+        color: $main-color;
+      }
+    }
+    .tags_list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 16px 0;
+      .tags_item {
+        display: block;
+        padding: 10px 15px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        border-radius: 15px;
+        background-color: $second-color;
+        .tag_item-link {
+          display: block;
+          width: 100%;
+          height: 100%;
+          color: $hover-main;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .filter_container {
+    display: block;
+    width: 50%;
+    border-radius: 15px;
+    border: 2px solid #f0f0f0;
+    padding: 25px;
+    .filter_form {
+      display: block;
+      .filter_list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin: 8px 0;
+        .filter_item {
+          display: block;
+          width: 100%;
+          .filter_item-lable {
+            display: flex;
+            height: 30px;
+            align-items: center;
+            margin: 8px 0;
+            .filter_lable-icon {
+              font-size: 25px;
+            }
+            .filter_lable-title {
+              font-size: 18px;
+              font-weight: bolder;
+              margin: 0 8px;
+            }
+          }
+          .filter_input-container {
+            display: flex;
+            height: 50px;
+            align-items: center;
+            justify-content: space-between;
+            input,
+            select {
+              width: 100%;
+              height: 100%;
+              border: none;
+              background-color: #f5f7f9;
+              border-radius: 10px;
+              padding-left: 10px;
+              font-size: 16px;
+            }
+          }
+        }
+        .filter_item.fisrt {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          .filter_input-container {
+            input {
+              width: calc(100% - 58px);
+              height: 100%;
+            }
+            button {
+              display: block;
+              width: 50px;
+              height: 50px;
+              font-size: 20px;
+              border: none;
+              background-color: $main-color;
+              color: white;
+              border-radius: 15px;
+              box-shadow: 0 5px 5px rgb(200, 196, 196);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Mobile Tablet */
+@media (max-width: 1023px) {
+  .tagandfilter_container {
+    display: block;
+    margin: 8px 0;
+    margin-top: 0;
+    .tag_container {
+      text-align: center;
+      width: 100%;
+    }
+    .filter_container {
+      width: 100%;
+      padding: 10px;
+      .filter_form {
+        display: block;
+        .filter_list {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 4px;
+          margin: 8px 0;
+          .filter_item {
+            display: block;
+            width: 100%;
+            .filter_item-lable {
+              margin: 4px 0;
+              .filter_lable-icon {
+                font-size: 20px;
+              }
+              .filter_lable-title {
+                font-size: 15px;
+                font-weight: bolder;
+                margin: 0 8px;
+              }
+            }
+            .filter_input-container {
+              display: flex;
+              height: 50px;
+              align-items: center;
+              justify-content: space-between;
+              input,
+              select {
+                width: 100%;
+                height: 100%;
+                border: none;
+                background-color: #f5f7f9;
+                border-radius: 10px;
+                padding-left: 10px;
+                font-size: 16px;
+              }
+            }
+          }
+          .filter_item.fisrt {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            .filter_input-container {
+              input {
+                width: calc(100% - 58px);
+                height: 100%;
+              }
+              button {
+                display: block;
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                border: none;
+                background-color: $main-color;
+                color: white;
+                border-radius: 15px;
+                box-shadow: 0 5px 5px rgb(200, 196, 196);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+}

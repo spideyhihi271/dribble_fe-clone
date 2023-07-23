@@ -1,0 +1,144 @@
+@import "../variable";
+
+.job_filter {
+  display: block;
+  width: 100%;
+  .job_type-list {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    margin: 16px 0;
+    .job_type-item {
+      display: block;
+      font-size: 17px;
+      color: $text-color;
+      font-weight: 500;
+      margin-right: 32px;
+    }
+    .job_type-item:hover {
+      cursor: pointer;
+    }
+    .job_type-item.active {
+      color: black;
+      font-weight: bolder;
+    }
+  }
+  .job_search {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    .job_search-keyword {
+      flex: 5;
+      display: flex;
+
+      .search_but {
+        flex: 1;
+        background-color: $tranparent-bg;
+        border: none;
+        font-size: 18px;
+      }
+      input {
+        flex: 15;
+        border: none;
+        font-size: 16px;
+        background-color: $tranparent-bg;
+      }
+    }
+    .job_line {
+      display: flex;
+      width: 0.5px;
+      height: 90%;
+      align-items: center;
+      .line {
+        width: 1px;
+        display: block;
+        height: 90%;
+        background-color: #e8e8e8;
+      }
+    }
+    .job_search-location,
+    .job_search-career {
+      flex: 1;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      .job_select-input {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        height: 85%;
+        border: none;
+        background-color: #dedede;
+        border-radius: 8px;
+        padding: 0 5px;
+        font-weight: bold;
+        option {
+          font-weight: bold;
+          background-color: white;
+        }
+      }
+    }
+  }
+}
+/* Mobile Tablet */
+@media (max-width: 1023px) {
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .job_filter {
+    .job_type-list {
+      margin: 8px 0;
+    }
+    .job_search {
+      .job_search-keyword {
+        flex: 5;
+        display: flex;
+        input {
+          flex: 5;
+          font-size: 15px;
+        }
+      }
+      .job_search-location,
+      .job_search-career {
+        flex: 2;
+      }
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .job_filter {
+    .job_type-list {
+      margin: 8px 0;
+      .job_type-item {
+        font-size: 17px;
+      }
+    }
+    .job_search {
+      .job_search-keyword {
+        flex: 5;
+        display: flex;
+        .search_but {
+          flex: 1;
+          background-color: $tranparent-bg;
+          border: none;
+          font-size: 18px;
+        }
+        input {
+          flex: 3;
+          font-size: 15px;
+        }
+      }
+      .job_search-location,
+      .job_search-career {
+        flex: 2;
+      }
+    }
+  }
+}

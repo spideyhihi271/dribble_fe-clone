@@ -1,0 +1,104 @@
+@import "../variable";
+
+.chat_info{
+    display: block;
+    width: 20%;
+    .chat_header{
+        display: block;
+        text-align: center;
+        .chat_header-avt{
+            display: block;
+            width: 70px;
+            height: 70px;
+            margin: 8px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            img{
+                object-fit: cover;
+            }
+        }
+        .chat_header-name{
+            font-weight: bolder;
+            font-size: 17px;
+            margin: 4px 0;
+        }
+        .chat_header-address{
+            font-size: 15px;
+        }
+    }
+    .chat_info-apply{
+        display: block;
+        margin: 16px 0;
+        .apply_title{
+            margin: 8px 0;
+            font-weight: bold;
+        }
+        .apply_list{
+            display: block;
+            .apply_item{
+                display: block;
+                padding: 10px 5px;
+                border-radius: 10px;
+                background-color: #f1f3f4;
+                .apply_job-name{
+                    font-weight: bold;
+                }
+                .appy_job-short{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    .chat_detail-info{
+        margin: 16px 0;
+        .detail_info-title{
+            margin: 8px 0;
+            font-weight: bold;
+        }
+        .detail_info-list{
+            display: block;
+            .detail_info-item{
+                display: flex;
+                height: fit-content;
+                padding: 5px 0;
+                align-items: center;
+                .detail_info-icon{
+                    display: flex;
+                    width: 40px;
+                    height: 40px;
+                    align-items: center;
+                    justify-content: space-around;
+                    background-color: #f1f3f4;
+                    border-radius: 50%;
+                    font-size: 18px;
+                    margin-right: 8px;
+                }
+                .detail_info-content{
+                    display: block;
+                    width: calc(100% - 48px);
+                    font-size: 14px;
+                    .info_content-title{
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Mobile Tablet */
+@media (max-width: 1023px) {
+    .chat_info{
+        display: none;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+ 
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  
+}
