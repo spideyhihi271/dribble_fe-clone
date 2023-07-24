@@ -45,7 +45,7 @@ function Header() {
             </li>
             <li className="nav_item">
               <Link to={"/hire"} className="nav_item-link">
-                Thuê Designer
+                Thuê
               </Link>
             </li>
           </ul>
